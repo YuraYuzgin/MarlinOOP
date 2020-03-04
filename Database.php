@@ -30,7 +30,7 @@ class Database
 
     public function insert($table, $data)
     {
-        // создаём строки из массива для запроса
+        // создаём строки из массива для запроса (перечисление полей и плэйсхолдеров)
         $keys = array_keys($data);
         $fieldNameString = implode($keys, ', ');
         $placeholderString = implode($keys, ', :');
@@ -50,7 +50,7 @@ class Database
         }
         $string = rtrim($string, ', ');
 
-        // добавляем к массив id
+        // добавляем к массиву id
         $data['id'] = $id;
 
         // выполняем запрос
