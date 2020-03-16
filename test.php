@@ -1,6 +1,6 @@
 <?php
 
-require_once 'Database.php';
+//require_once 'Database.php';
 
 //$users = Database::getInstance()->query("SELECT * FROM users WHERE username IN (?, ?)", ['John Doe', 'Jane Koe']);
 //$users = Database::getInstance()->get('users', ['username', '=','John Doe']);
@@ -11,8 +11,8 @@ require_once 'Database.php';
     'password' => 'newpassword'
 ]);*/
 
-$users = Database::getInstance()->get('users', ['username', '=','John Doe']);
-echo $users->first()->username;
+//$users = Database::getInstance()->get('users', ['username', '=','John Doe']);
+//echo $users->first()->username;
 
 
 /*if($users->error()) {
